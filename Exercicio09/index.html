@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 09</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!--
@@ -19,22 +20,42 @@
         https://www.w3schools.com/jsref/dom_obj_event.asp
     -->
     <main>
+        <div id="questao">
+            <h1>Questão 09</h1>
+            <p>
+                Crie um formulário com os campos para cadastrar o usuário de um sistema
+                (login,senha e confirmar senha). Permita que a página seja submetida apenas
+                se todos os campos estiverem preenchidos, se os campos senha e confirmar
+                senha forem iguais e a senha possuir entre 6 e 10 caracteres.
+            </p>
+        </div>
+        <div class="conteudo-formulario">
+            <form id="formulario" action="">
+                <div class="conteudo">
+                    <label for="login">login</label>    
+                    <input type="text" id="login" required><br/>
+                </div>
+    
+                <div class="conteudo">
+                    <label for="senha">senha</label>    
+                    <input type="password" id="senha"  minlength="6" maxlength="10" required><br/>
+                </div>
+    
+                <div class="conteudo">
+                    <label for="confirmar" >confirmar senha</label>    
+                    <input type="password" id="confirmar" required minlength="6" maxlength="10"><br/>
+                </div>
+                
+                <span id="aviso" ></span><br/>
+                <button id="enviar" type="submit" onclick="confirmarDados();">Enviar</button>
+            </form>
 
-        <form id="formulario" action="">
-            <label for="login">login</label>    
-            <input type="text" id="login" required><br/>
-
-            <label for="senha">senha</label>    
-            <input type="password" id="senha"  minlength="6" maxlength="10" required><br/>
-
-            <label for="confirmar" >confirmar senha</label>    
-            <input type="password" id="confirmar" required minlength="6" maxlength="10"><br/>
-            
-            <span id="aviso" ></span><br/>
-            <button id="enviar" type="submit" onclick="confirmarDados();">Enviar</button>
-        </form>
+        </div>
     </main>
-    <a href="../lista-exercicios.html">Voltar</a>
+    <div id="voltar">
+        <a href="../lista-exercicios.html">Voltar</a>
+
+    </div>
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

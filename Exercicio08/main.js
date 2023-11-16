@@ -3,7 +3,7 @@ let corBranco = document.getElementById("corBranco");
 let corFundo1 = document.getElementById("fundo1"); 
 let corFundo2 = document.getElementById("fundo2");
 let paragrafo = document.getElementById("texto");
-let tamanho = 16;
+let tamanho = 20;
 let tamanhoFonte = paragrafo.style.fontSize = tamanho;
 
 console.log(tamanhoFonte);

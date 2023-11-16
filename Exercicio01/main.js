@@ -1,16 +1,16 @@
 function corVermelho()
 {
-     document.body.style.backgroundColor = "#ff0000";
+     document.body.style.backgroundColor = "red";
 }
 function corVerde()
 {
-    document.body.style.backgroundColor = "#00ff00";
+    document.body.style.backgroundColor = "green";
 }
 function corAzul()
 {
-    document.body.style.backgroundColor = "#0077ff";
+    document.body.style.backgroundColor = "blue";
 }
 function corAmarelo()
 {
-    document.body.style.backgroundColor = "#ffee00";
+    document.body.style.backgroundColor = "yellow";
 }

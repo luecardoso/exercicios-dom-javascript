@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 01</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="pagina">
@@ -14,15 +15,29 @@
             azul e amarelo, respectivamente
             https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events
         -->
-        <form action="">
-            <button type="button" onclick="corVermelho();"
-            >Vermelho</button>
-            <button type="button" onclick="corVerde();">Verde</button>
-            <button type="button" onclick="corAzul();">Azul</button>
-            <button type="button" onclick="corAmarelo();" >Amarelo</button>
-        </form>
+        <div id="questao">
+            <h1>Questão 01</h1>
+            <p>
+                Crie um formulário com 4 botões que, ao clicar em cada um,
+                altere a cor do plano de fundo da página para vermelho, verde,
+                azul e amarelo, respectivamente
+            </p>
+            
+        </div>
+        <div id="opcao">
+            <form action="">
+                <button type="button" onclick="corVermelho();"
+                >Vermelho</button>
+                <button type="button" onclick="corVerde();">Verde</button>
+                <button type="button" onclick="corAzul();">Azul</button>
+                <button type="button" onclick="corAmarelo();" >Amarelo</button>
+            </form>
+        </div>
+        <div id="voltar">
+            <a href="../lista-exercicios.html">Voltar</a>
 
-        <a href="../lista-exercicios.html">Voltar</a>
+        </div>
+        
     </main>
     <script type="text/javascript" src="main.js"></script>
 </body>

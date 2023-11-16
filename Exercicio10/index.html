@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 10</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
@@ -26,50 +27,79 @@
            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
            https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
         -->
+        <div id="questao">
+            <h1>Questão 10</h1>
+            <p>
+                Crie um formulario de cadastro de cliente. O formulario deve conter os campos:
+           Nome(text),Pessoa(fisica/juridica -radio), CPF(text), data de nascimento,
+           endereço(text),cep(text),telefone(text),email. O formulario deve ativar o
+           campo CPF apenas se o radiobutton de pessoa física estiver ativo e o campo de 
+           CNPJ no caso de pessoa jurídica. O campo data de nascimento também deve estar
+           ativo no caso de pessoa física ser selecionado e deve aceitar que somente 
+           números sejam digitados. O campo CEP também só deve aceitar número.
+            </p>
+        </div>
+        <div id="conteudo-formulario">
         <form action="">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" required>
-
-            <fieldset>
-                <legend>Pessoa</legend>
-                <input type="radio" name="tipo-pessoa" id="pessoa-fisica">
-                <label for="pessoa-fisica">Pessoa Física</label>
+                <div class="conteudo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" required>
+                    
+                    <fieldset>
+                        <legend>Pessoa</legend>
+                        <input type="radio" name="tipo-pessoa" id="pessoa-fisica">
+                        <label for="pessoa-fisica">Pessoa Física</label>
+            
+                        <input type="radio" name="tipo-pessoa" id="pessoa-juridica">
+                        <label for="pessoa-juridica">Pessoa Jurídica</label>
+                    </fieldset>
+        
+                    <div class="agrupamento">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" maxlength="11" >
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" maxlength="14">
     
-                <input type="radio" name="tipo-pessoa" id="pessoa-juridica">
-                <label for="pessoa-juridica">Pessoa Jurídica</label>
-            </fieldset>
+                    </div>
+        
+                    <div id="campo-nascimento">
+                        <label for="data-nascimento">Data de Nascimento</label>
+                        <input type="date" id="data-nascimento" required> 
+                    </div>
+        
+                    <div class="agrupamento"> 
+                        <label for="endereco">Endereço: </label>
+                        <input type="text" id="endereco">
+            
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep"  pattern="\d{5}\d{3}" maxlength="8" 
+                        placeholder="00000-000" title="CEP 12345678" required>
+                    </div>
+        
+                    <div class="agrupamento">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" placeholder="(00) 0000-0000" id="telefone" required maxlength="11">
+            
+                        <label for="email">Email</label>
+                        <input type="email" required id="email">
+                    </div>
+        
+                    <button id="enviar" type="submit" >Enviar</button>
 
-            <label for="cpf">CPF</label>
-            <input type="text" id="cpf" maxlength="11" >
-            <label for="cnpj">CNPJ</label>
-            <input type="text" id="cnpj" maxlength="14">
+                </div>
+                
+            </form>
+        </div>
 
-            <div id="campo-nascimento">
-                <label for="data-nascimento">Data de Nascimento</label>
-                <input type="date" id="data-nascimento" required> 
-            </div>
-
-            <label for="endereco">Endereço: </label>
-            <input type="text" id="endereco">
-
-            <label for="cep">CEP</label>
-            <input type="text" id="cep"  pattern="\d{5}\d{3}" maxlength="8" 
-            placeholder="00000-000" title="CEP 12345678" required>
-
-            <label for="telefone">Telefone</label>
-            <input type="text" placeholder="(00) 0000-0000" id="telefone" required maxlength="11">
-
-            <label for="email">Email</label>
-            <input type="email" required id="email">
-
-            <button id="enviar" type="submit" >Enviar</button>
-        </form>
         <span id="aviso"></span>
         <br/>
         <br/>
         <br/>
     </main>
-    <a href="../lista-exercicios.html">Voltar</a>
+    <div id="voltar">
+        <a href="../lista-exercicios.html">Voltar</a>
+
+    </div>
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
